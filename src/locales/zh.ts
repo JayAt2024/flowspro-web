@@ -5,6 +5,7 @@ export const zh = {
     keyMaps: '按键映射',
     terms: '条款与隐私'
   },
+  signIn: '登录',
   language: '语言',
   en: 'English',
   zh: '中文'

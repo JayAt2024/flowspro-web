@@ -6,8 +6,8 @@ import { useLanguage } from "../context/LanguageContext";
 const TRANSLATIONS: Record<string, Record<string, string>> = {
   // Header
   "Keyboard Shortcuts": {
-    en: "Keyboard Shortcuts",
-    zh: "键盘快捷键",
+    en: "Keyboard Shortcuts (macOS)",
+    zh: "键盘快捷键 (macOS)",
   },
   "shortcuts across": {
     en: "shortcuts across",

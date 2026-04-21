@@ -39,10 +39,10 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/" className={`font-medium transition-all duration-300 ${isActive('/') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-primary'}`}>{t.nav.home}</Link>
-            <Link to="/features" className={`font-medium transition-all duration-300 ${isActive('/features') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-primary'}`}>{t.nav.features}</Link>
-            <Link to="/key-maps" className={`font-medium transition-all duration-300 ${isActive('/key-maps') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-primary'}`}>{t.nav.keyMaps}</Link>
-            <Link to="/terms" className={`font-medium transition-all duration-300 ${isActive('/terms') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-primary'}`}>{t.nav.terms}</Link>
+            <Link to="/" className={`font-medium transition-all duration-300 ${isActive('/') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.home}</Link>
+            <Link to="/features" className={`font-medium transition-all duration-300 ${isActive('/features') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.features}</Link>
+            <Link to="/key-maps" className={`font-medium transition-all duration-300 ${isActive('/key-maps') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.keyMaps}</Link>
+            <Link to="/terms" className={`font-medium transition-all duration-300 ${isActive('/terms') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.terms}</Link>
           </div>
 
           <div className="flex items-center gap-4">

@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
       <style>{`
         .glass-panel {
           background: rgba(247, 249, 251, 0.7);
-          backdrop-filter: blur(20px);
+          backdrop-filter: blur(15px);
         }
         .mobile-menu {
           transform: translateX(100%);
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
       `}</style>
 
       <header className="fixed top-0 left-0 right-0 z-50 glass-panel shadow-xl shadow-primary/5">
-        <nav className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+        <nav className="flex justify-between items-center w-full px-6 py-4 max-w-6xl mx-auto">
           <div className="text-2xl font-black tracking-tighter text-primary font-headline flex items-center">
             <img alt="Flows Pro Logo" className="h-10 w-auto object-contain" src={FlowsProLogo} />
             <span className="ml-3 font-headline font-bold text-primary">Flows Pro</span>
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
             <Link to="/" className={`font-medium transition-all duration-300 ${isActive('/') ? 'text-primary border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.home}</Link>
             <Link to="/features" className={`font-medium transition-all duration-300 ${isActive('/features') ? 'text-primary border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.features}</Link>
             <Link to="/key-maps" className={`font-medium transition-all duration-300 ${isActive('/key-maps') ? 'text-primary border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.keyMaps}</Link>
-            <Link to="/terms" className={`font-medium transition-all duration-300 ${isActive('/terms') ? 'text-primary border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.terms}</Link>
+            <Link to="/terms-privacy" className={`font-medium transition-all duration-300 ${isActive('/terms-privacy') ? 'text-[#4527A0] border-b-2 border-[#009688]' : 'text-on-surface-variant'}`}>{t.nav.terms}</Link>
           </div>
 
           <div className="flex items-center gap-4">
@@ -124,7 +124,7 @@ const Navbar: React.FC = () => {
       </header>
 
       {/* Mobile Fullscreen Menu */}
-      <div className={`fixed top-0 right-0 h-full w-full bg-white z-50 mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+      <div className={`fixed top-0 right-0 h-full w-full bg-white z-50 mobile-menu glass-panel ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="flex justify-end p-6">
           <button
             onClick={toggleMobileMenu}
@@ -139,7 +139,7 @@ const Navbar: React.FC = () => {
           <Link to="/" onClick={handleMobileMenuClick} className={`text-2xl font-medium ${isActive('/') ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{t.nav.home}</Link>
           <Link to="/features" onClick={handleMobileMenuClick} className={`text-2xl font-medium ${isActive('/features') ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{t.nav.features}</Link>
           <Link to="/key-maps" onClick={handleMobileMenuClick} className={`text-2xl font-medium ${isActive('/key-maps') ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{t.nav.keyMaps}</Link>
-          <Link to="/terms" onClick={handleMobileMenuClick} className={`text-2xl font-medium ${isActive('/terms') ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{t.nav.terms}</Link>
+          <Link to="/terms-privacy" onClick={handleMobileMenuClick} className={`text-2xl font-medium ${isActive('/terms-privacy') ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{t.nav.terms}</Link>
         </div>
         <div className="absolute bottom-8 right-8">
           <button className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">

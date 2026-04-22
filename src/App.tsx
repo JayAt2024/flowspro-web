@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/features" element={<Features />} />
           <Route path="/key-maps" element={<KeyMaps />} />
-          <Route path="/terms" element={<Terms />} />
+          <Route path="/terms-privacy" element={<Terms />} />
         </Routes>
       </Router>
     </LanguageProvider>

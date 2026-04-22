@@ -446,17 +446,15 @@ const KeyMaps: React.FC = () => {
         .km-page {
           min-height: 100vh;
           background: var(--bg);
-          padding: 80px 24px 80px;
+          padding: 100px 24px 80px;
           font-family: -apple-system, 'Helvetica Neue', sans-serif;
         }
 
         .km-header {
-          max-width: 960px;
-          margin: 0 auto 40px;
+          margin: 0 auto 30px;
         }
 
         .km-masonry {
-          max-width: 960px;
           margin: 0 auto;
           display: flex;
           gap: 16px;
@@ -469,7 +467,7 @@ const KeyMaps: React.FC = () => {
         }
       `}</style>
 
-      <div className="km-page">
+      <div className="km-page max-w-4xl mx-auto">
         <div className="km-header">
           <div
             style={{
@@ -490,7 +488,7 @@ const KeyMaps: React.FC = () => {
                 justifyContent: "center",
               }}
             >
-              <span style={{ fontSize: "16px" }}>⌨</span>
+              <span style={{ fontSize: "36px" }}>⌨</span>
             </div>
             <h1
               style={{

@@ -53,9 +53,9 @@ const Terms: React.FC = () => {
   };
 
   return (
-    <div className="container max-auto px-4 pt-20 pb-16">
+    <div className="container max-w-4xl mx-auto px-4 pt-28 pb-16">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-4xl font-bold">{getActiveTabText()}</h1>
+        <h1 className="text-2xl font-bold">{getActiveTabText()}</h1>
         
         {/* Dropdown Menu */}
         <div className="relative" ref={dropdownRef}>

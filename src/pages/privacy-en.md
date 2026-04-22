@@ -1,39 +1,39 @@
-**Effective Date:** April 22, 2026\
-**Last Revised:** April 22, 2026
+**Effective Date:** April 1, 2025\
+**Last Revised:** March 16, 2025
 
 <br />
 
-## 1. Information We Collect
+## 1. **Information Collection**
 
-We collect information that you provide to us when you register for an account, use our service, or communicate with us. This may include your name, email address, and other personal information.
-
-<br />
-
-## 2. How We Use Your Information
-
-We use your information to provide, maintain, and improve our service, to communicate with you, and to personalize your experience.
+We do not collect any user privacy information. All user-created content is stored locally on the device by default.
 
 <br />
 
-## 3. Sharing Your Information
+## 2. **How We Use Your Information**
 
-We do not share your personal information with third parties except as required by law or with your consent.
+We access the network only to verify the user's purchase status to determine which features the user can access.
 
 <br />
 
-## 4. Security
+## 3. **Sharing Your Information**
+
+We do not share your personal information with third parties.
+
+<br />
+
+## 4. **Security**
 
 We take reasonable measures to protect your information from unauthorized access, disclosure, or destruction.
 
 <br />
 
-## 5. Your Choices
+## 5. **Your Choices**
 
-You can update your account information or delete your account at any time.
+When users use the export function to save or share their created content externally, users should bear their own responsibility for any potential privacy leaks through the shared content.
 
 <br />
 
-## 6. Changes to This Policy
+## 6. **Changes to This Policy**
 
 We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on our website.
 
@@ -43,4 +43,4 @@ We may update this privacy policy from time to time. We will notify you of any c
 
 <br />
 
-If you have any questions about this agreement, please contact us: Email (<coooooooderjay@gmail.com>).
+If you have any questions about this policy, please contact us: Email (<coooooooderjay@gmail.com>).

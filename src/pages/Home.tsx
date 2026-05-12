@@ -63,10 +63,10 @@ const Home: React.FC = () => {
               <div className="flex flex-col items-center mt-2 mb-16">
                 <img 
                   alt="Flows Pro Logo" 
-                  className="h-32 w-auto object-contain mb-0" 
+                  className="h-32 w-auto object-contain" 
                   src={FlowsProLogo} 
                 />
-                <span className="text-4xl font-bold bg-gradient-to-br from-[#572B7E] to-[#37B673] bg-clip-text text-transparent">Flows Pro</span>
+                <span className="text-4xl font-bold bg-gradient-to-br from-[#572B7E] to-[#37B673] bg-clip-text text-transparent -mt-6">Flows Pro</span>
               </div>
 
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">

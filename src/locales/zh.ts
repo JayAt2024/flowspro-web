@@ -44,6 +44,7 @@ export const zh = {
     },
     feature6: {
       title: '掌控你的工作流',
+      description: '提升工作效率',
       iosDownload: '在 App Store 下载',
       macDownload: '下载 macOS 版本'
     },

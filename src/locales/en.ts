@@ -44,6 +44,7 @@ export const en = {
     },
     feature6: {
       title: 'Take Control of Your Workflows',
+      description: 'Boost Your Productivity',
       iosDownload: 'Download for iOS',
       macDownload: 'Download for macOS'
     },

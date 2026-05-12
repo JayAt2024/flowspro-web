@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
-// Import images
+import FlowsProLogo from '../assets/FlowsPro.png';
+
 import homefeature1CN from '../assets/homefeature1-cn.png';
 import homefeature1EN from '../assets/homefeature1-en.png';
 import homefeature2CN from '../assets/homefeature2-cn.png';
@@ -56,14 +57,23 @@ const Home: React.FC = () => {
   return (
     <div className="scroll-smooth">
       <div className="scroll-snap-type-y mandatory">
-        <section className="pt-52 pb-12 scroll-snap-align-center text-center flex items-center bg-surface relative overflow-hidden">
+        <section className="pt-28 pb-12 scroll-snap-align-center text-center flex items-center bg-surface relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-[#37B673] via-[#572B7E] to-[#572B7E] opacity-10"></div>
             <div className="container max-w-4xl mx-auto px-4 relative z-10">
+              <div className="flex flex-col items-center mt-2 mb-16">
+                <img 
+                  alt="Flows Pro Logo" 
+                  className="h-32 w-auto object-contain mb-0" 
+                  src={FlowsProLogo} 
+                />
+                <span className="text-4xl font-bold bg-gradient-to-br from-[#572B7E] to-[#37B673] bg-clip-text text-transparent">Flows Pro</span>
+              </div>
+
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 {t.home.feature6.title}
               </h2>
-              <p className="text-on-surface-variant text-lg mb-12">
-                {t.home.feature5.description}
+              <p className="text-primary text-2xl mb-12">
+                {t.home.feature6.description}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -93,7 +103,7 @@ const Home: React.FC = () => {
             </div>
           </section>
 
-          <section className="pb-4 pt-8 scroll-snap-align-center text-center relative overflow-hidden">
+          <section className="pt-8 scroll-snap-align-center text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface to-surface-container-low"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-[#572B7E] via-[#572B7E] to-surface-container-low opacity-[0.1]"></div>
             <div className="container max-w-4xl mx-auto px-4 relative z-10">

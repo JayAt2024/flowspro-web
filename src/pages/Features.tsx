@@ -97,7 +97,7 @@ const Features: React.FC = () => {
         <div className="ft-header">
           <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
             <div style={{ width: "32px", height: "32px", borderRadius: "8px", background: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontSize: "19px" }}>✨</span>
+              <span style={{ fontSize: "20px" }}>✨</span>
             </div>
             <h1 className="text-2xl md:text-3xl font-bold text-primary" style={{ margin: 0, letterSpacing: "-0.02em" }}>
               {t.features.title}

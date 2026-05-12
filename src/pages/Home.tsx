@@ -1,36 +1,47 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
+// Import images
+import homefeature1CN from '../assets/homefeature1-cn.png';
+import homefeature1EN from '../assets/homefeature1-en.png';
+import homefeature2CN from '../assets/homefeature2-cn.png';
+import homefeature2EN from '../assets/homefeature2-en.png';
+import homefeature3CN from '../assets/homefeature3-cn.png';
+import homefeature3EN from '../assets/homefeature3-en.png';
+import homefeature4CN from '../assets/homefeature4-cn.png';
+import homefeature4EN from '../assets/homefeature4-en.png';
+import homefeature5CN from '../assets/homefeature5-cn.png';
+import homefeature5EN from '../assets/homefeature5-en.png';
+
 const Home: React.FC = () => {
   const { t, language } = useLanguage();
-  const imageSuffix = language === 'zh' ? '-cn' : '-en';
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const features = [
     {
       title: t.home.feature1.title,
       description: t.home.feature1.description,
-      image: `/src/assets/homefeature1${imageSuffix}.png`
+      image: language === 'zh' ? homefeature1CN : homefeature1EN
     },
     {
       title: t.home.feature2.title,
       description: t.home.feature2.description,
-      image: `/src/assets/homefeature2${imageSuffix}.png`
+      image: language === 'zh' ? homefeature2CN : homefeature2EN
     },
     {
       title: t.home.feature3.title,
       description: t.home.feature3.description,
-      image: `/src/assets/homefeature3${imageSuffix}.png`
+      image: language === 'zh' ? homefeature3CN : homefeature3EN
     },
     {
       title: t.home.feature4.title,
       description: t.home.feature4.description,
-      image: `/src/assets/homefeature4${imageSuffix}.png`
+      image: language === 'zh' ? homefeature4CN : homefeature4EN
     },
     {
       title: t.home.feature5.title,
       description: t.home.feature5.description,
-      image: `/src/assets/homefeature5${imageSuffix}.png`
+      image: language === 'zh' ? homefeature5CN : homefeature5EN
     }
   ];
 
@@ -43,10 +54,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="pt-20">
-      <div className="scroll-smooth">
-        <div className="scroll-snap-type-y mandatory">
-          <section className="py-24 scroll-snap-align-center text-center min-h-[300px] flex items-center bg-surface relative overflow-hidden">
+    <div className="scroll-smooth">
+      <div className="scroll-snap-type-y mandatory">
+        <section className="pt-52 pb-12 scroll-snap-align-center text-center flex items-center bg-surface relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-[#37B673] via-[#572B7E] to-[#572B7E] opacity-10"></div>
             <div className="container max-w-4xl mx-auto px-4 relative z-10">
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
@@ -83,7 +93,7 @@ const Home: React.FC = () => {
             </div>
           </section>
 
-          <section className="py-8 scroll-snap-align-center text-center relative overflow-hidden">
+          <section className="pb-4 pt-8 scroll-snap-align-center text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface to-surface-container-low"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-[#572B7E] via-[#572B7E] to-surface-container-low opacity-[0.1]"></div>
             <div className="container max-w-4xl mx-auto px-4 relative z-10">
@@ -94,7 +104,7 @@ const Home: React.FC = () => {
           {features.map((feature, index) => (
             <section
               key={index}
-              className={`py-16 scroll-snap-align-center ${index % 2 === 0 ? 'bg-surface-container-low' : 'bg-surface'}`}
+              className={`py-12 scroll-snap-align-center ${index % 2 === 0 ? 'bg-surface-container-low' : 'bg-surface'}`}
             >
               <div className="container max-w-4xl mx-auto px-4">
                 <div className={`flex flex-col gap-8 ${
@@ -129,9 +139,8 @@ const Home: React.FC = () => {
             </section>
           ))}
         </div>
-      </div>
 
-      {selectedImage && (
+        {selectedImage && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
           onClick={closeModal}
@@ -150,7 +159,7 @@ const Home: React.FC = () => {
           />
         </div>
       )}
-    </div>
+      </div>
   );
 };
 

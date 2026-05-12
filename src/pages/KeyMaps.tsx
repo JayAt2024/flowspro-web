@@ -116,9 +116,10 @@ const DATA: ShortcutCard[] = [
           { label: "Paste Node",               keys: ["⌘", "V"] },
           { label: "Duplicate to Clipboard",   keys: ["⌘", "D"] },
           { label: "Clear Layout",             keys: ["⌘", "⌥", "C"] },
+          { label: "Clear Layout",             keys: ["Triple Tap On Canvas"] },
           { label: "Connect Default I/O",      keys: ["⌘", "L"] },
           { label: "Disconnect All",           keys: ["⌘", "⇧", "L"] },
-          { label: "Delete Node",              keys: ["Delete"] },
+          { label: "Delete Node",              keys: ["⌫"] },
         ],
       },
       {
@@ -317,11 +318,10 @@ const Card: React.FC<CardProps> = ({ card, t }) => (
         }}
       />
       <h2
+        className="font-bold text-primary"
         style={{
           margin: 0,
           fontSize: "15px",
-          fontWeight: 700,
-          color: "var(--title-text)",
           letterSpacing: "0.01em",
         }}
       >
@@ -491,11 +491,9 @@ const KeyMaps: React.FC = () => {
               <span style={{ fontSize: "36px" }}>⌨</span>
             </div>
             <h1
+              className="text-2xl md:text-3xl font-bold text-primary"
               style={{
                 margin: 0,
-                fontSize: "28px",
-                fontWeight: 800,
-                color: "var(--page-title)",
                 letterSpacing: "-0.02em",
               }}
             >

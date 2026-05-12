@@ -49,6 +49,67 @@ export const zh = {
     },
     viewLarger: '点击查看大图'
   },
+  features: {
+    title: 'Flows Pro 节点功能总览',
+    imageSection: '图像处理节点',
+    imageNodes: [
+      { name: '图片滤镜', english: 'Image Filter', description: '应用多种滤镜效果到图片，支持滤镜叠加' },
+      { name: '添加边框', english: 'Add Border to Image', description: '为图片添加边框效果' },
+      { name: '添加圆角', english: 'Add Radius to Image', description: '为图片添加圆角效果' },
+      { name: '图片裁剪', english: 'Image Cropping', description: '裁剪图片到指定区域' },
+      { name: '图片翻转', english: 'Image Flip', description: '水平或垂直翻转图片' },
+      { name: '图片旋转', english: 'Image Rotating', description: '按指定角度旋转图片' },
+      { name: '颜色反转', english: 'Image Color Invert', description: '反转图片颜色' },
+      { name: '图片切片', english: 'Image Slicing', description: '将图片切割成多个部分' },
+      { name: '图片合成', english: 'Image Composing', description: '多层图像叠加合成' },
+      { name: '网格合成', english: 'Image Composing Grid', description: '多张图片网格布局拼接' },
+      { name: '创建背景', english: 'Image Make Background', description: '创建指定颜色的背景图片' },
+      { name: '获取尺寸', english: 'Get Image Dimensions', description: '获取图片宽度和高度' },
+      { name: '获取平均色', english: 'Get Average Color', description: '提取图片的平均颜色值' },
+      { name: '获取主色调', english: 'Get Dominant Colors', description: '提取图片的主要颜色' },
+      { name: '图像分割', english: 'Image Segmenting', description: '图像分割处理' },
+      { name: 'Cube转LUT', english: 'Cube to LUT', description: '将Cube文件转换为LUT滤镜' }
+    ],
+    textSection: '文本处理节点',
+    textNodes: [
+      { name: '文本转图片', english: 'Text to Image', description: '将文本渲染为图片，支持字体、颜色、装饰' },
+      { name: '字符计数', english: 'Character Count', description: '计算文本的字符长度' },
+      { name: '反转文本', english: 'Reverse Text', description: '反转文本字符串' },
+      { name: '分割文本', english: 'Split Text', description: '按分隔符截取文本范围' },
+      { name: '获取子串位置', english: 'Get Substring Start', description: '查找子串在文本中的起始位置' }
+    ],
+    colorSection: '颜色处理节点',
+    colorNodes: [
+      { name: '颜色转图片', english: 'Color to Image', description: '将颜色值转换为纯色图片' },
+      { name: '随机颜色', english: 'Get Random Color', description: '生成随机颜色值' },
+      { name: '渐变转图片', english: 'Linear Gradient to Image', description: '创建线性渐变效果图片' }
+    ],
+    mathSection: '数学计算节点',
+    mathNodes: [
+      { name: '加法', english: 'Addition', description: '两个双精度数相加' },
+      { name: '减法', english: 'Subtraction', description: '两个双精度数相减' },
+      { name: '乘法', english: 'Multiplication', description: '两个双精度数相乘' },
+      { name: '除法', english: 'Division', description: '两个双精度数相除' },
+      { name: '幂运算', english: 'Power', description: '计算数的幂次' },
+      { name: '平方根', english: 'Square Root', description: '计算平方根' },
+      { name: '随机小数', english: 'Random Decimal', description: '生成随机双精度数' },
+      { name: '取最大值', english: 'Get Greater Value', description: '取两个数中的较大值' },
+      { name: '取最小值', english: 'Get Less Value', description: '取两个数中的较小值' },
+      { name: '小数转整数', english: 'Decimal to Integer', description: '将双精度数转为整数' },
+      { name: '整数转小数', english: 'Int to Decimal', description: '将整数转为双精度数' }
+    ],
+    boolSection: '逻辑判断节点',
+    boolNodes: [
+      { name: '逻辑与', english: 'Logic And', description: '两个布尔值的逻辑与运算' },
+      { name: '逻辑或', english: 'Logic Or', description: '两个布尔值的逻辑或运算' },
+      { name: '取反', english: 'Flip Bool', description: '布尔值取反' },
+      { name: '相等判断', english: 'Is Equal', description: '判断两个值是否相等' },
+      { name: '大于判断', english: 'Is Greater than', description: '判断第一个值是否大于第二个' },
+      { name: '小于判断', english: 'Is Less than', description: '判断第一个值是否小于第二个' },
+      { name: '条件分支', english: 'If Else', description: '根据条件执行不同的处理路径' }
+    ],
+    supportedText: '个节点目前支持于 Flows Pro'
+  },
   keyMaps: {
     title: '按键映射',
     editorShortcuts: '编辑器页面快捷键',

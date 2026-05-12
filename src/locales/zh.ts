@@ -5,10 +5,50 @@ export const zh = {
     keyMaps: '按键映射',
     terms: '条款与隐私'
   },
-  signIn: '登录',
+  download: '下载',
   language: '语言',
   en: 'English',
   zh: '中文',
+  footer: {
+    copyright: '© 2026 Flows Pro',
+    contact: '联系方式:',
+    terms: '用户协议',
+    privacy: '隐私政策',
+    feedback: '问题反馈',
+    suggestion: '功能建议',
+    youtube: 'Youtube',
+    x: 'X',
+    xiaohongshu: '小红书',
+    wechat: '微信公众号'
+  },
+  home: {
+    feature1: {
+      title: '可视化节点编辑，轻松构建工作流',
+      description: '通过拖拽节点即可创建复杂的图像处理流程，无需编写代码。支持图片滤镜、文本处理、数学计算等丰富的节点类型。'
+    },
+    feature2: {
+      title: '丰富的图像处理能力',
+      description: '内置数十种滤镜效果以及基础图片处理功能，支持滤镜叠加组合。可以实时预览效果，所见即所得。'
+    },
+    feature3: {
+      title: '文本创作，创意无限',
+      description: '支持多种字体、字号、颜色，添加阴影、描边、下划线等装饰效果。轻松生成精美文字图片。'
+    },
+    feature4: {
+      title: '一键批量运行，批量导出',
+      description: '设置输入参数后一键执行工作流，支持多页工作流切换。生成图片批量导出，多种导出格式可选。'
+    },
+    feature5: {
+      title: 'iOS/iPadOS/macOS 三平台支持',
+      description: '导出的 flowspro 文件在多种平台可使用。多种平台，一致的使用体验。'
+    },
+    feature6: {
+      title: '掌控你的工作流',
+      iosDownload: '在 App Store 下载',
+      macDownload: '下载 macOS 版本'
+    },
+    viewLarger: '点击查看大图'
+  },
   keyMaps: {
     title: '按键映射',
     editorShortcuts: '编辑器页面快捷键',

@@ -64,10 +64,10 @@ const Navbar: React.FC = () => {
 
       <header className="fixed top-0 left-0 right-0 z-50 glass-panel shadow-xl shadow-primary/5">
         <nav className="flex justify-between items-center w-full px-6 py-4 max-w-6xl mx-auto">
-          <div className="text-2xl font-black tracking-tighter text-primary font-headline flex items-center">
+          <Link to="/" className="text-2xl font-black tracking-tighter text-primary font-headline flex items-center">
             <img alt="Flows Pro Logo" className="h-10 w-auto object-contain" src={FlowsProLogo} />
-            <span className="ml-3 font-headline font-bold text-primary">Flows Pro</span>
-          </div>
+            <span className="ml-3 font-headline font-bold bg-gradient-to-br from-[#572B7E] to-[#37B673] bg-clip-text text-transparent">Flows Pro</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4">
@@ -106,8 +106,8 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Desktop Sign In Button */}
-            <button className="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">
-              {t.signIn}
+            <button className="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all w-32">
+              {t.download}
             </button>
 
             {/* Mobile Menu Button */}
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
         </div>
         <div className="absolute bottom-8 right-8">
           <button className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">
-            {t.signIn}
+            {t.download}
           </button>
         </div>
       </div>

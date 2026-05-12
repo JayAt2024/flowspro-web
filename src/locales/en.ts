@@ -5,10 +5,50 @@ export const en = {
     keyMaps: 'Key Maps',
     terms: 'Terms & Privacy'
   },
-  signIn: 'Sign In',
+  download: 'Download',
   language: 'Language',
   en: 'English',
   zh: '中文',
+  footer: {
+    copyright: '© 2026 Flows Pro',
+    contact: 'Contact us:',
+    terms: 'Terms of Service',
+    privacy: 'Privacy Policy',
+    feedback: 'Feedback',
+    suggestion: 'Suggestions',
+    youtube: 'Youtube',
+    x: 'X',
+    xiaohongshu: 'Xiaohongshu',
+    wechat: 'Wechat Official Account'
+  },
+  home: {
+    feature1: {
+      title: 'Visual Node Editing',
+      description: 'Easily build workflows by dragging and dropping nodes. No coding required. Supports rich node types including image filters, text processing, mathematical calculations, and more.'
+    },
+    feature2: {
+      title: 'Powerful Image Processing',
+      description: 'Built-in dozens of filter effects and basic image processing functions. Support filter stacking and combinations. Real-time preview, what you see is what you get.'
+    },
+    feature3: {
+      title: 'Text Creation',
+      description: 'Supports multiple fonts, sizes, colors. Add decorations like shadows, strokes, and underlines. Easily generate beautiful text images.'
+    },
+    feature4: {
+      title: 'Batch Processing & Export',
+      description: 'Execute workflows with one click after setting input parameters. Support multi-page workflow switching. Batch export generated images with multiple export formats available.'
+    },
+    feature5: {
+      title: 'Cross-Platform Support',
+      description: 'Exported flows pro files work across iOS, iPadOS, and macOS. Consistent experience across multiple platforms.'
+    },
+    feature6: {
+      title: 'Take Control of Your Workflows',
+      iosDownload: 'Download for iOS',
+      macDownload: 'Download for macOS'
+    },
+    viewLarger: 'Click to view larger'
+  },
   keyMaps: {
     title: 'Key Maps',
     editorShortcuts: 'Editor Shortcuts',

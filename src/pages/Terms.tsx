@@ -2,6 +2,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import { useSearchParams } from 'react-router-dom';
 
 // 导入 MD 文件
 import termsEn from './terms-en.md?raw';
@@ -11,7 +12,8 @@ import privacyCh from './privacy-ch.md?raw';
 
 const Terms: React.FC = () => {
   const { language } = useLanguage();
-  const [activeTab, setActiveTab] = useState<'terms' | 'privacy'>('terms');
+  const [searchParams] = useSearchParams();
+  const [activeTab, setActiveTab] = useState<'terms' | 'privacy'>(searchParams.get('tab') === 'privacy' ? 'privacy' : 'terms');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -33,6 +35,16 @@ const Terms: React.FC = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  // 监听 URL 参数变化，更新 activeTab
+  useEffect(() => {
+    const tabParam = searchParams.get('tab');
+    if (tabParam === 'privacy') {
+      setActiveTab('privacy');
+    } else {
+      setActiveTab('terms');
+    }
+  }, [searchParams]);
 
   // 根据语言和当前标签选择对应的 MD 内容
   const markdownContent = useMemo(() => {

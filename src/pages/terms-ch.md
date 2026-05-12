@@ -82,4 +82,4 @@
 
 <br />
 
-如对本协议有任何疑问，请联系我们：Email (<coooooooderjay@gmail.com>)。
+如对本协议有任何疑问，请联系我们：邮箱 (<coooooooderjay@gmail.com>)。

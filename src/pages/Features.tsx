@@ -21,7 +21,7 @@ const NodeSection: React.FC<SectionProps> = ({ title, icon, nodes, language }) =
         <div className="text-2xl">{icon}</div>
         <h2 className="text-xl font-bold text-primary">{title}</h2>
       </div>
-      <div className="bg-surface-container-low rounded-xl overflow-hidden">
+      <div className="bg-surface-container-low rounded-xl overflow-hidden shadow">
         <table className="w-full">
           <thead className="bg-surface-container-high">
             <tr>
@@ -104,7 +104,7 @@ const Features: React.FC = () => {
             </h1>
           </div>
           <p style={{ margin: 0, fontSize: "14px", color: "var(--page-sub)" }}>
-            {t.features.boolNodes.length + t.features.mathNodes.length + t.features.colorNodes.length + t.features.textNodes.length + t.features.imageNodes.length} {language === 'zh' ? '个' : ''} {t.features.supportedText}
+            {t.features.total} {t.features.boolNodes.length + t.features.mathNodes.length + t.features.colorNodes.length + t.features.textNodes.length + t.features.imageNodes.length} {language === 'zh' ? '个' : ''} {t.features.supportedText}
           </p>
         </div>
 

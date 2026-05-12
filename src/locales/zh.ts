@@ -109,7 +109,8 @@ export const zh = {
       { name: '小于判断', english: 'Is Less than', description: '判断第一个值是否小于第二个' },
       { name: '条件分支', english: 'If Else', description: '根据条件执行不同的处理路径' }
     ],
-    supportedText: '个节点目前支持于 Flows Pro'
+    supportedText: '节点',
+    total: '目前 Flows Pro 支持共',
   },
   keyMaps: {
     title: '按键映射',

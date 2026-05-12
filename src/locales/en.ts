@@ -109,7 +109,8 @@ export const en = {
       { name: 'Is Less than', english: 'Is Less than', description: 'Check if first value is less' },
       { name: 'If Else', english: 'If Else', description: 'Execute different paths based on condition' }
     ],
-    supportedText: 'nodes currently supported in Flows Pro'
+    supportedText: 'nodes currently supported in Flows Pro',
+    total: 'Total',
   },
   keyMaps: {
     title: 'Key Maps',

@@ -7,6 +7,7 @@ export const en = {
   },
   download: 'Download',
   language: 'Language',
+  comingSoon: 'Coming Soon',
   en: 'English',
   zh: '中文',
   footer: {

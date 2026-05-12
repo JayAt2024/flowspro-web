@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { useToast } from '../context/ToastContext';
 import FlowsProLogo from '../assets/FlowsPro_64.png';
 
 const Navbar: React.FC = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const { showToast } = useToast();
   const location = useLocation();
   const langMenuRef = useRef<HTMLDivElement>(null);
 
@@ -106,7 +108,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Desktop Sign In Button */}
-            <button className="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all w-32">
+            <button onClick={() => showToast(t.comingSoon)} className="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all w-32">
               {t.download}
             </button>
 
@@ -142,7 +144,7 @@ const Navbar: React.FC = () => {
           <Link to="/terms-privacy" onClick={handleMobileMenuClick} className={`text-2xl font-medium ${isActive('/terms-privacy') ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{t.nav.terms}</Link>
         </div>
         <div className="absolute bottom-8 right-8">
-          <button className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">
+          <button onClick={() => showToast(t.comingSoon)} className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">
             {t.download}
           </button>
         </div>

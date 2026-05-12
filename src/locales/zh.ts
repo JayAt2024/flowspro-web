@@ -7,6 +7,7 @@ export const zh = {
   },
   download: '下载',
   language: '语言',
+  comingSoon: '即将上线',
   en: 'English',
   zh: '中文',
   footer: {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useToast } from '../context/ToastContext';
 
 import FlowsProLogo from '../assets/FlowsPro.png';
 
@@ -16,6 +17,7 @@ import homefeature5EN from '../assets/homefeature5-en.png';
 
 const Home: React.FC = () => {
   const { t, language } = useLanguage();
+  const { showToast } = useToast();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const features = [
@@ -77,8 +79,8 @@ const Home: React.FC = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="#"
+                <button
+                  onClick={() => showToast(t.comingSoon)}
                   className="inline-flex items-center justify-center px-10 py-5 bg-primary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -87,9 +89,9 @@ const Home: React.FC = () => {
                     <line x1="12" y1="15" x2="12" y2="3"/>
                   </svg>
                   {t.home.feature6.iosDownload}
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
+                  onClick={() => showToast(t.comingSoon)}
                   className="inline-flex items-center justify-center px-10 py-5 bg-surface-container-highest text-on-surface font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-outline"
                 >
                   <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -98,7 +100,7 @@ const Home: React.FC = () => {
                     <line x1="12" y1="15" x2="12" y2="3"/>
                   </svg>
                   {t.home.feature6.macDownload}
-                </a>
+                </button>
               </div>
             </div>
           </section>

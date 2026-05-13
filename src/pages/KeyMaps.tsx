@@ -479,7 +479,7 @@ const KeyMaps: React.FC = () => {
           >
             <div
               style={{
-                width: "32px",
+                width: "48px",
                 height: "32px",
                 borderRadius: "8px",
                 background: "var(--accent)",

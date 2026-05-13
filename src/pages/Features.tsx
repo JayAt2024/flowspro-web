@@ -96,7 +96,7 @@ const Features: React.FC = () => {
       <div className="ft-page max-w-4xl mx-auto">
         <div className="ft-header">
           <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
-            <div style={{ width: "32px", height: "32px", borderRadius: "8px", background: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ width: "48px", height: "32px", borderRadius: "8px", background: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <span style={{ fontSize: "20px" }}>✨</span>
             </div>
             <h1 className="text-2xl md:text-3xl font-bold text-primary" style={{ margin: 0, letterSpacing: "-0.02em" }}>

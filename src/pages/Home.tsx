@@ -4,16 +4,16 @@ import { useToast } from '../context/ToastContext';
 
 import FlowsProLogo from '../assets/FlowsPro.png';
 
-import homefeature1CN from '../assets/homefeature1-cn.png';
-import homefeature1EN from '../assets/homefeature1-en.png';
-import homefeature2CN from '../assets/homefeature2-cn.png';
-import homefeature2EN from '../assets/homefeature2-en.png';
-import homefeature3CN from '../assets/homefeature3-cn.png';
-import homefeature3EN from '../assets/homefeature3-en.png';
-import homefeature4CN from '../assets/homefeature4-cn.png';
-import homefeature4EN from '../assets/homefeature4-en.png';
-import homefeature5CN from '../assets/homefeature5-cn.png';
-import homefeature5EN from '../assets/homefeature5-en.png';
+import homefeature1CN from '../assets/homefeature1-cn.jpeg';
+import homefeature1EN from '../assets/homefeature1-en.jpeg';
+import homefeature2CN from '../assets/homefeature2-cn.jpeg';
+import homefeature2EN from '../assets/homefeature2-en.jpeg';
+import homefeature3CN from '../assets/homefeature3-cn.jpeg';
+import homefeature3EN from '../assets/homefeature3-en.jpeg';
+import homefeature4CN from '../assets/homefeature4-cn.jpeg';
+import homefeature4EN from '../assets/homefeature4-en.jpeg';
+import homefeature5CN from '../assets/homefeature5-cn.jpeg';
+import homefeature5EN from '../assets/homefeature5-en.jpeg';
 
 const Home: React.FC = () => {
   const { t, language } = useLanguage();

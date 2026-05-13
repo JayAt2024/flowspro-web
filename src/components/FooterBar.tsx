@@ -11,11 +11,42 @@ const FooterBar: React.FC = () => {
 
   useEffect(() => {
     const checkLocation = async () => {
-      try {
-        const response = await fetch('https://ipapi.co/json/');
-        const data = await response.json();
-        setIsChinaIP(data.country_code === 'CN');
-      } catch {
+      // 尝试多个 IP 服务作为备选
+      const services = [
+        'https://ipapi.co/json/',
+        'https://freegeoip.app/json/',
+        'https://geolocation-db.com/json/'
+      ];
+
+      for (const service of services) {
+        try {
+          const controller = new AbortController();
+          const timeout = setTimeout(() => controller.abort(), 5000);
+          
+          const response = await fetch(service, { signal: controller.signal });
+          const data = await response.json();
+          clearTimeout(timeout);
+          
+          // 检查各种可能的字段名
+          const countryCode = data.country_code || data.countryCode || data.country;
+          if (countryCode === 'CN' || countryCode === 'cn') {
+            setIsChinaIP(true);
+            return;
+          }
+        } catch {
+          // 继续尝试下一个服务
+          continue;
+        }
+      }
+      
+      // 所有服务都失败或返回非 CN，使用备用方案
+      const lang = navigator.language || navigator.language;
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      
+      // 如果语言是中文或时区在中国，默认认为是中国用户
+      if (lang.startsWith('zh') || timezone.includes('Asia/Shanghai')) {
+        setIsChinaIP(true);
+      } else {
         setIsChinaIP(false);
       }
     };

@@ -12,10 +12,16 @@ import privacyCh from './privacy-ch.md?raw';
 
 const Terms: React.FC = () => {
   const { language } = useLanguage();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState<'terms' | 'privacy'>(searchParams.get('tab') === 'privacy' ? 'privacy' : 'terms');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // 切换标签并更新 URL 参数
+  const handleTabChange = (tab: 'terms' | 'privacy') => {
+    setActiveTab(tab);
+    setSearchParams({ tab });
+  };
 
   // 关闭下拉菜单的函数
   const closeDropdown = () => {
@@ -96,7 +102,7 @@ const Terms: React.FC = () => {
             <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10">
               <button
                 onClick={() => {
-                  setActiveTab('terms');
+                  handleTabChange('terms');
                   closeDropdown();
                 }}
                 className={`block w-full text-left px-4 py-2 hover:bg-gray-100 ${activeTab === 'terms' ? 'bg-gray-100 font-medium' : ''}`}
@@ -105,7 +111,7 @@ const Terms: React.FC = () => {
               </button>
               <button
                 onClick={() => {
-                  setActiveTab('privacy');
+                  handleTabChange('privacy');
                   closeDropdown();
                 }}
                 className={`block w-full text-left px-4 py-2 hover:bg-gray-100 ${activeTab === 'privacy' ? 'bg-gray-100 font-medium' : ''}`}

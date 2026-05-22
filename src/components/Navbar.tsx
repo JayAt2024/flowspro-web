@@ -14,6 +14,30 @@ const Navbar: React.FC = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // 检测当前系统
+  const getOS = () => {
+    const userAgent = window.navigator.userAgent;
+    if (userAgent.includes('iPhone') || userAgent.includes('iPad') || userAgent.includes('iPod')) {
+      return 'ios';
+    } else if (userAgent.includes('Mac')) {
+      return 'macos';
+    }
+    return 'other';
+  };
+
+  // 处理下载按钮点击
+  const handleDownloadClick = () => {
+    const os = getOS();
+    if (os === 'ios') {
+      window.open('https://apps.apple.com/app/id6758991081', '_blank');
+    } else if (os === 'macos') {
+      showToast(t.comingSoon);
+    } else {
+      // 其他系统，默认显示 coming soon
+      showToast(t.comingSoon);
+    }
+  };
+
   const toggleLangMenu = () => {
     setIsLangMenuOpen(!isLangMenuOpen);
   };
@@ -107,8 +131,8 @@ const Navbar: React.FC = () => {
               )}
             </div>
 
-            {/* Desktop Sign In Button */}
-            <button onClick={() => showToast(t.comingSoon)} className="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all w-32">
+            {/* Desktop Download Button */}
+            <button onClick={handleDownloadClick} className="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all w-32">
               {t.download}
             </button>
 
@@ -144,7 +168,7 @@ const Navbar: React.FC = () => {
           <Link to="/terms-privacy" onClick={handleMobileMenuClick} className={`text-2xl font-medium ${isActive('/terms-privacy') ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{t.nav.terms}</Link>
         </div>
         <div className="absolute bottom-8 right-8">
-          <button onClick={() => showToast(t.comingSoon)} className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">
+          <button onClick={handleDownloadClick} className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">
             {t.download}
           </button>
         </div>

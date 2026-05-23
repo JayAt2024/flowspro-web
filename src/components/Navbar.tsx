@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Desktop Download Button */}
-            <button onClick={handleDownloadClick} className="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all w-32">
+            <button onClick={() => window.open('https://apps.apple.com/app/6758991081', '_blank')} className="hidden md:block bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all w-32">
               {t.download}
             </button>
 

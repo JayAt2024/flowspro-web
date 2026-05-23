@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { useToast } from '../context/ToastContext';
 
 import FlowsProLogo from '../assets/FlowsPro.png';
 
@@ -17,7 +16,6 @@ import homefeature5EN from '../assets/homefeature5-en.jpeg';
 
 const Home: React.FC = () => {
   const { t, language } = useLanguage();
-  const { showToast } = useToast();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const features = [

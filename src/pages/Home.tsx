@@ -91,7 +91,7 @@ const Home: React.FC = () => {
                   {t.home.feature6.iosDownload}
                 </button>
                 <button
-                  onClick={() => showToast(t.comingSoon)}
+                  onClick={() => window.open('https://apps.apple.com/app/6758991081', '_blank')}
                   className="inline-flex items-center justify-center px-10 py-5 bg-surface-container-highest text-on-surface font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-outline"
                 >
                   <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

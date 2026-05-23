@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
           <Link to="/terms-privacy" onClick={handleMobileMenuClick} className={`text-2xl font-medium ${isActive('/terms-privacy') ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>{t.nav.terms}</Link>
         </div>
         <div className="absolute bottom-8 right-8">
-          <button onClick={handleDownloadClick} className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">
+          <button onClick={() => window.open('https://apps.apple.com/app/6758991081', '_blank')} className="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold shadow-lg shadow-primary/20 active:scale-95 transition-all">
             {t.download}
           </button>
         </div>

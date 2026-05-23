@@ -1,42 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
-import { useToast } from '../context/ToastContext';
 import FlowsProLogo from '../assets/FlowsPro_64.png';
 
 const Navbar: React.FC = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
-  const { showToast } = useToast();
   const location = useLocation();
   const langMenuRef = useRef<HTMLDivElement>(null);
 
   const isActive = (path: string) => location.pathname === path;
-
-  // 检测当前系统
-  const getOS = () => {
-    const userAgent = window.navigator.userAgent;
-    if (userAgent.includes('iPhone') || userAgent.includes('iPad') || userAgent.includes('iPod')) {
-      return 'ios';
-    } else if (userAgent.includes('Mac')) {
-      return 'macos';
-    }
-    return 'other';
-  };
-
-  // 处理下载按钮点击
-  const handleDownloadClick = () => {
-    const os = getOS();
-    if (os === 'ios') {
-      window.open('https://apps.apple.com/app/id6758991081', '_blank');
-    } else if (os === 'macos') {
-      showToast(t.comingSoon);
-    } else {
-      // 其他系统，默认显示 coming soon
-      showToast(t.comingSoon);
-    }
-  };
 
   const toggleLangMenu = () => {
     setIsLangMenuOpen(!isLangMenuOpen);
